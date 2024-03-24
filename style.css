@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cards{
+    display: flex;
+    margin: auto;
+    width: 750px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.card .icon,
+.card h1{
+    margin-bottom: 2rem;
+}
+
+.card p{
+    margin-bottom: 4rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.card h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: hsl(0, 0%, 95%);
+}
+
+#cards .card:first-child{
+    background: hsl(31, 77%, 52%);
+}
+
+#cards .card:nth-child(2){
+    background: hsl(184, 100%, 22%);
+}
+
+#cards .card:nth-child(3){
+    background: hsl(179, 100%, 13%);
+}
+
+
+#cards .card:first-child > .btn{
+    color: hsl(31, 77%, 52%);
+}
+
+#cards .card:nth-child(2) > .btn{
+    color: hsl(184, 100%, 22%);
+}
+
+#cards .card:nth-child(3) > .btn{
+    color:hsl(179, 100%, 13%);
+}
+
+#cards .card:first-child .icon{
+    background: url('./images/icon-sedans.svg');
+    width: 64px;
+    height: 40px;
+}
+
+#cards .card:nth-child(2) .icon{
+    background: url('./images/icon-suvs.svg');
+    width: 64px;
+    height: 40px;
+}
+
+#cards .card:nth-child(3) .icon{
+    background: url('./images/icon-luxury.svg');
+    width: 64px;
+    height: 40px;
+}
+
+.btn{
+    text-align: center;
+    background:hsl(0, 0%, 95%) ;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in;
+}
+
+.btn:active {
+    background: rgba(0, 0, 0, 0);
+    color: hsla(0, 0%, 100%, 0.75) !important;
+    outline: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+
+@media screen and (max-width:800px) {
+    body{
+        height: auto;
+    }
+
+    #cards{
+        flex-direction: column;
+        width: 250px;
+        margin: 50px auto;
+    }
+}
